@@ -6,139 +6,149 @@
 //  Copyright © 2018 BarCode Designs. All rights reserved.
 //
 
+
 import UIKit
 import MapKit
 import CoreLocation
+import AVFoundation
 
-class ViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelegate {
-   
+class ViewController: UIViewController {
+    
+    @IBOutlet weak var nextdirectionsLabel: UILabel!
+    @IBOutlet weak var directionsLabel: UILabel!
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var mapView: MKMapView!
-    var locationManager: CLLocationManager!
-    var route: MKRoute!
+    
+    let locationManager = CLLocationManager()
+    var currentCoordinate: CLLocationCoordinate2D!
+    
+    var steps = [MKRouteStep]()
+    let speechSynthesizer = AVSpeechSynthesizer()
+    
+    var stepCounter = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationManager.requestAlwaysAuthorization()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+        locationManager.startUpdatingLocation()
+        mapView.delegate = self
 
-        self.locationManager = CLLocationManager()
-        self.locationManager.delegate = self
-        self.mapView.delegate = self
-        
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        self.locationManager.distanceFilter = kCLDistanceFilterNone
-        
-        self.locationManager.requestWhenInUseAuthorization()
-        self.locationManager.requestAlwaysAuthorization()
-        
-        self.locationManager.startUpdatingLocation()
-        
-        self.mapView.showsUserLocation = true
-        //          // add gesture recognizer
-        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(ViewController.mapLongPress(_:))) // colon needs to pass through info
-        longPress.minimumPressDuration = 1.5 // in seconds
-        //add gesture recognition
-        mapView.addGestureRecognizer(longPress)
-        
-        
     }
     
-    
-//    func showRouteOnMap(pickupCoordinate: CLLocationCoordinate2D, destinationCoordinate: CLLocationCoordinate2D) {
-//
-//        let sourcePlacemark = MKPlacemark(coordinate: pickupCoordinate, addressDictionary: nil)
-//        let destinationPlacemark = MKPlacemark(coordinate: destinationCoordinate, addressDictionary: nil)
-//
-//        let sourceMapItem = MKMapItem(placemark: sourcePlacemark)
-//        let destinationMapItem = MKMapItem(placemark: destinationPlacemark)
-//
-//        let sourceAnnotation = MKPointAnnotation()
-//
-//        if let location = sourcePlacemark.location {
-//            sourceAnnotation.coordinate = location.coordinate
-//        }
-//
-//        let destinationAnnotation = MKPointAnnotation()
-//
-//        if let location = destinationPlacemark.location {
-//            destinationAnnotation.coordinate = location.coordinate
-//        }
-//
-//        self.mapView.showAnnotations([sourceAnnotation,destinationAnnotation], animated: true )
-//
-//        let directionRequest = MKDirectionsRequest()
-//        directionRequest.source = sourceMapItem
-//        directionRequest.destination = destinationMapItem
-//        directionRequest.transportType = .automobile
-//
-//        let directions = MKDirections(request: directionRequest)
-//
-//        directions.calculate {
-//            (response, error) -> Void in
-//
-//            guard let response = response else {
-//                if let error = error {
-//                    print("Error: \(error)")
-//                }
-//
-//                return
-//            }
-//
-//            let route = response.routes[0]
-//
-//            self.mapView.add((route.polyline), level: MKOverlayLevel.aboveRoads)
-//
-//            let rect = route.polyline.boundingMapRect
-//            self.mapView.setRegion(MKCoordinateRegionForMapRect(rect), animated: true)
-//        }
-//    }
-//
-//    //    MARK: - MKMapViewDelegate
-//
-//    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-//
-//        let renderer = MKPolylineRenderer(overlay: overlay)
-//
-//        renderer.strokeColor = UIColor(red: 17.0/255.0, green: 147.0/255.0, blue: 255.0/255.0, alpha: 1)
-//
-//        renderer.lineWidth = 5.0
-//
-//        return renderer
-//
-//
-//
-//
-//    }
-    @objc func mapLongPress(_ recognizer: UIGestureRecognizer) {
+    func getDirections(to destination: MKMapItem) {
+        let sourcePlacemark = MKPlacemark(coordinate: currentCoordinate)
+        let sourceMapItem = MKMapItem(placemark: sourcePlacemark)
         
-        print("A long press has been detected.")
+        let directionsRequest = MKDirectionsRequest()
+        directionsRequest.source = sourceMapItem
+        directionsRequest.destination = destination
+        directionsRequest.transportType = .automobile
         
-        let touchedAt = recognizer.location(in: self.mapView) // adds the location on the view it was pressed
-        let touchedAtCoordinate : CLLocationCoordinate2D = mapView.convert(touchedAt, toCoordinateFrom: self.mapView) // will get coordinates
-        
-        let newPin = MKPointAnnotation()
-        newPin.coordinate = touchedAtCoordinate
-        mapView.addAnnotation(newPin)
-        
-        
-        
-    }
-
-    var isInitiallyZoomedToUserLocation: Bool = false
-    
-    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
-        if !isInitiallyZoomedToUserLocation {
-            isInitiallyZoomedToUserLocation = true
-            mapView.showAnnotations([userLocation], animated: true)
+        let directions = MKDirections(request: directionsRequest)
+        directions.calculate { (response, _) in
+            guard let response = response else { return }
+            guard let primaryRoute = response.routes.first else { return }
             
+            self.mapView.add(primaryRoute.polyline)
+            
+            self.locationManager.monitoredRegions.forEach({ self.locationManager.stopMonitoring(for: $0) })
+            
+            self.steps = primaryRoute.steps
+            for i in 0 ..< primaryRoute.steps.count {
+                let step = primaryRoute.steps[i]
+                print(step.instructions)
+                print(step.distance)
+                let region = CLCircularRegion(center: step.polyline.coordinate,
+                                              radius: 20,
+                                              identifier: "\(i)")
+                self.locationManager.startMonitoring(for: region)
+                let circle = MKCircle(center: region.center, radius: region.radius)
+                self.mapView.add(circle)
+            }
+            
+            let initialMessage = "In \(self.steps[0].distance) meters, \(self.steps[0].instructions) then in \(self.steps[1].distance) meters, \(self.steps[1].instructions)."
+            self.directionsLabel.text = initialMessage
+            let speechUtterance = AVSpeechUtterance(string: initialMessage)
+            self.speechSynthesizer.speak(speechUtterance)
+            
+            
+            let secondMessage = "Next in \(self.steps[1].distance) meters, \(self.steps[1].instructions)."
+            self.nextdirectionsLabel.text = secondMessage
+            let speechesUtterance = AVSpeechUtterance(string: secondMessage)
+            self.speechSynthesizer.speak(speechesUtterance)
+            
+            
+            self.stepCounter += 1
+        }
+    }
+    
+}
+
+extension ViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        manager.stopUpdatingLocation()
+        guard let currentLocation = locations.first else { return }
+        currentCoordinate = currentLocation.coordinate
+        mapView.userTrackingMode = .followWithHeading
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        print("ENTERED")
+        stepCounter += 1
+        if stepCounter < steps.count {
+            let currentStep = steps[stepCounter]
+            let message = "In \(currentStep.distance) meters, \(currentStep.instructions)"
+            directionsLabel.text = message
+            let speechUtterance = AVSpeechUtterance(string: message)
+            speechSynthesizer.speak(speechUtterance)
+        } else {
+            let message = "Arrived at destination"
+            directionsLabel.text = message
+            let speechUtterance = AVSpeechUtterance(string: message)
+            speechSynthesizer.speak(speechUtterance)
+            stepCounter = 0
+            locationManager.monitoredRegions.forEach({ self.locationManager.stopMonitoring(for: $0) })
+            
+        }
+    }
+}
+
+extension ViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.endEditing(true)
+        let localSearchRequest = MKLocalSearchRequest()
+        localSearchRequest.naturalLanguageQuery = searchBar.text
+        let region = MKCoordinateRegion(center: currentCoordinate, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+        localSearchRequest.region = region
+        let localSearch = MKLocalSearch(request: localSearchRequest)
+        localSearch.start { (response, _) in
+            guard let response = response else { return }
+            guard let firstMapItem = response.mapItems.first else { return }
+            self.getDirections(to: firstMapItem)
         }
         
     }
-   
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+extension ViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        if overlay is MKPolyline {
+            let renderer = MKPolylineRenderer(overlay: overlay)
+            renderer.strokeColor = .blue
+            renderer.lineWidth = 10
+            return renderer
+        }
+        if overlay is MKCircle {
+            let renderer = MKCircleRenderer(overlay: overlay)
+            renderer.strokeColor = .clear
+            renderer.fillColor = .clear
+            renderer.alpha = 0.5
+            return renderer
+        }
+        return MKOverlayRenderer()
     }
-
-
 }
 
