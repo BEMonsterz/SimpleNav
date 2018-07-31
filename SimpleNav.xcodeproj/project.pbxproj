@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9303E76921026169008759DF /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9303E76821026169008759DF /* TestViewController.swift */; };
-		934B70D4210F7F7600A72825 /* navViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934B70D3210F7F7600A72825 /* navViewController.swift */; };
 		938A4E9C2101054500B75988 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938A4E9B2101054500B75988 /* AppDelegate.swift */; };
 		938A4E9E2101054500B75988 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938A4E9D2101054500B75988 /* ViewController.swift */; };
 		938A4EA12101054500B75988 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 938A4E9F2101054500B75988 /* Main.storyboard */; };
@@ -19,7 +18,6 @@
 
 /* Begin PBXFileReference section */
 		9303E76821026169008759DF /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestViewController.swift; path = ../../TestViewController.swift; sourceTree = "<group>"; };
-		934B70D3210F7F7600A72825 /* navViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navViewController.swift; sourceTree = "<group>"; };
 		938A4E982101054500B75988 /* SimpleNav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleNav.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		938A4E9B2101054500B75988 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		938A4E9D2101054500B75988 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,7 +43,6 @@
 		938A4E8F2101054500B75988 = {
 			isa = PBXGroup;
 			children = (
-				934B70D3210F7F7600A72825 /* navViewController.swift */,
 				938A4E9A2101054500B75988 /* SimpleNav */,
 				938A4E992101054500B75988 /* Products */,
 				938A4EAD210105B100B75988 /* Frameworks */,
@@ -164,7 +161,6 @@
 			files = (
 				938A4E9E2101054500B75988 /* ViewController.swift in Sources */,
 				9303E76921026169008759DF /* TestViewController.swift in Sources */,
-				934B70D4210F7F7600A72825 /* navViewController.swift in Sources */,
 				938A4E9C2101054500B75988 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
