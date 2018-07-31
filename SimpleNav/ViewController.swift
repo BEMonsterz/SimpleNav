@@ -13,6 +13,22 @@ import CoreLocation
 import AVFoundation
 
 class ViewController: UIViewController {
+
+    
+    //Annotations
+    
+    var searchController:UISearchController!
+    var annotation:MKAnnotation!
+    var localSearchRequest:MKLocalSearchRequest!
+    var localSearch:MKLocalSearch!
+    var localSearchResponse:MKLocalSearchResponse!
+    var error:NSError!
+    var pointAnnotation:MKPointAnnotation!
+    var pinAnnotationView:MKPinAnnotationView!
+    
+    //End Of Annotations
+    
+    
     
     @IBOutlet weak var nextdirectionsLabel: UILabel!
     @IBOutlet weak var directionsLabel: UILabel!
@@ -35,7 +51,7 @@ class ViewController: UIViewController {
         locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
         locationManager.startUpdatingLocation()
         mapView.delegate = self
-
+        
     }
     
     func getDirections(to destination: MKMapItem) {
@@ -118,16 +134,46 @@ extension ViewController: CLLocationManagerDelegate {
 
 extension ViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
         searchBar.endEditing(true)
-        let localSearchRequest = MKLocalSearchRequest()
+        var localSearchRequest = MKLocalSearchRequest()
         localSearchRequest.naturalLanguageQuery = searchBar.text
         let region = MKCoordinateRegion(center: currentCoordinate, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
         localSearchRequest.region = region
-        let localSearch = MKLocalSearch(request: localSearchRequest)
+        var localSearch = MKLocalSearch(request: localSearchRequest)
         localSearch.start { (response, _) in
             guard let response = response else { return }
             guard let firstMapItem = response.mapItems.first else { return }
             self.getDirections(to: firstMapItem)
+        }
+        
+        searchBar.resignFirstResponder()
+        dismiss(animated: true, completion: nil)
+        if self.mapView.annotations.count != 0{
+            annotation = self.mapView.annotations[0]
+            self.mapView.removeAnnotation(annotation)
+        }
+        //2
+        localSearchRequest = MKLocalSearchRequest()
+        localSearchRequest.naturalLanguageQuery = searchBar.text
+        localSearch = MKLocalSearch(request: localSearchRequest)
+        localSearch.start { (localSearchResponse, error) -> Void in
+            
+            if localSearchResponse == nil{
+                let alertController = UIAlertController(title: nil, message: "Place Not Found", preferredStyle: UIAlertControllerStyle.alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alertController, animated: true, completion: nil)
+                return
+            }
+            //3
+            self.pointAnnotation = MKPointAnnotation()
+            self.pointAnnotation.title = searchBar.text
+            self.pointAnnotation.coordinate = CLLocationCoordinate2D(latitude: localSearchResponse!.boundingRegion.center.latitude, longitude:     localSearchResponse!.boundingRegion.center.longitude)
+            
+            
+            self.pinAnnotationView = MKPinAnnotationView(annotation: self.pointAnnotation, reuseIdentifier: nil)
+            self.mapView.centerCoordinate = self.pointAnnotation.coordinate
+            self.mapView.addAnnotation(self.pinAnnotationView.annotation!)
         }
         
     }
@@ -151,4 +197,7 @@ extension ViewController: MKMapViewDelegate {
         return MKOverlayRenderer()
     }
 }
+
+
+
 
