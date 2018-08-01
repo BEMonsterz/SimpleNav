@@ -92,11 +92,10 @@
                                     <constraint firstAttribute="height" constant="63" id="Bk3-Wu-RPg"/>
                                 </constraints>
                             </imageView>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Browse Destination" showsSearchResultsButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LpR-ZN-u0F">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Browse Destination" translatesAutoresizingMaskIntoConstraints="NO" id="LpR-ZN-u0F">
                                 <rect key="frame" x="0.0" y="73" width="375" height="56"/>
                                 <color key="tintColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <offsetWrapper key="searchFieldBackgroundPositionAdjustment" horizontal="0.0" vertical="0.0"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="yes" spellCheckingType="yes" smartInsertDeleteType="yes"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="yes"/>
                                 <connections>
                                     <outlet property="delegate" destination="hIV-br-Euk" id="SlC-d6-Y84"/>
                                 </connections>
