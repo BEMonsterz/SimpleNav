@@ -85,7 +85,7 @@ class ViewController: UIViewController {
                 self.mapView.add(circle)
             }
             
-            let initialMessage = "In \(self.steps[0].distance) meters, \(self.steps[0].instructions) then in \(self.steps[1].distance) meters, \(self.steps[1].instructions)."
+            let initialMessage = "In \(self.steps[0].distance) meters, \(self.steps[0].instructions)."
             self.directionsLabel.text = initialMessage
             let speechUtterance = AVSpeechUtterance(string: initialMessage)
             self.speechSynthesizer.speak(speechUtterance)
@@ -184,7 +184,7 @@ extension ViewController: MKMapViewDelegate {
         if overlay is MKPolyline {
             let renderer = MKPolylineRenderer(overlay: overlay)
             renderer.strokeColor = .blue
-            renderer.lineWidth = 10
+            renderer.lineWidth = 5
             return renderer
         }
         if overlay is MKCircle {

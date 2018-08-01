@@ -71,19 +71,19 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Dx7-ks-txf">
                                 <rect key="frame" x="-3" y="-4" width="381" height="820"/>
                             </mapView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="directions" translatesAutoresizingMaskIntoConstraints="NO" id="6QW-WB-Ke1">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="directionsCard" translatesAutoresizingMaskIntoConstraints="NO" id="6QW-WB-Ke1">
                                 <rect key="frame" x="18" y="189" width="341" height="543"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="543" id="kXQ-yL-kFZ"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fE1-I3-m1R">
-                                <rect key="frame" x="41" y="354" width="293" height="72"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fE1-I3-m1R">
+                                <rect key="frame" x="42" y="439" width="293" height="122"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="72" id="d0d-q3-yxL"/>
+                                    <constraint firstAttribute="height" constant="122" id="d0d-q3-yxL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <color key="textColor" red="0.42352941176470588" green="0.61960784313725492" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bar" translatesAutoresizingMaskIntoConstraints="NO" id="YOL-qc-wDX">
@@ -102,11 +102,11 @@
                                 </connections>
                             </searchBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Up Next" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFm-Ih-zNh">
-                                <rect key="frame" x="41" y="652" width="293" height="68"/>
+                                <rect key="frame" x="41" y="581" width="293" height="135"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="68" id="Cx9-Wz-l2O"/>
+                                    <constraint firstAttribute="height" constant="135" id="Cx9-Wz-l2O"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <color key="textColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -125,12 +125,12 @@
                             <constraint firstItem="YOL-qc-wDX" firstAttribute="trailing" secondItem="LpR-ZN-u0F" secondAttribute="trailing" id="Lu7-LV-1uc"/>
                             <constraint firstItem="YOL-qc-wDX" firstAttribute="top" secondItem="LpR-ZN-u0F" secondAttribute="top" id="W6t-ON-Nc7"/>
                             <constraint firstItem="Dx7-ks-txf" firstAttribute="leading" secondItem="De9-ky-GyZ" secondAttribute="leading" constant="-3" id="a0H-vY-3yi"/>
-                            <constraint firstItem="xFm-Ih-zNh" firstAttribute="leading" secondItem="fE1-I3-m1R" secondAttribute="leading" id="gMw-Z2-D2c"/>
-                            <constraint firstItem="De9-ky-GyZ" firstAttribute="bottom" secondItem="fE1-I3-m1R" secondAttribute="bottom" constant="352" id="hZC-Zq-FFJ"/>
-                            <constraint firstItem="xFm-Ih-zNh" firstAttribute="trailing" secondItem="fE1-I3-m1R" secondAttribute="trailing" id="hkN-g3-Mfq"/>
-                            <constraint firstItem="fE1-I3-m1R" firstAttribute="leading" secondItem="De9-ky-GyZ" secondAttribute="leading" constant="41" id="lNp-z4-TIM"/>
-                            <constraint firstItem="fE1-I3-m1R" firstAttribute="centerX" secondItem="LpR-ZN-u0F" secondAttribute="centerX" id="n6U-R2-jlw"/>
-                            <constraint firstItem="De9-ky-GyZ" firstAttribute="bottom" secondItem="xFm-Ih-zNh" secondAttribute="bottom" constant="58" id="xd2-QY-JtJ"/>
+                            <constraint firstItem="xFm-Ih-zNh" firstAttribute="leading" secondItem="fE1-I3-m1R" secondAttribute="leading" constant="-1" id="gMw-Z2-D2c"/>
+                            <constraint firstItem="De9-ky-GyZ" firstAttribute="bottom" secondItem="fE1-I3-m1R" secondAttribute="bottom" constant="217" id="hZC-Zq-FFJ"/>
+                            <constraint firstItem="xFm-Ih-zNh" firstAttribute="trailing" secondItem="fE1-I3-m1R" secondAttribute="trailing" constant="-1" id="hkN-g3-Mfq"/>
+                            <constraint firstItem="fE1-I3-m1R" firstAttribute="leading" secondItem="De9-ky-GyZ" secondAttribute="leading" constant="42" id="lNp-z4-TIM"/>
+                            <constraint firstItem="fE1-I3-m1R" firstAttribute="centerX" secondItem="LpR-ZN-u0F" secondAttribute="centerX" constant="1" id="n6U-R2-jlw"/>
+                            <constraint firstItem="De9-ky-GyZ" firstAttribute="bottom" secondItem="xFm-Ih-zNh" secondAttribute="bottom" constant="62" id="xd2-QY-JtJ"/>
                             <constraint firstItem="Dx7-ks-txf" firstAttribute="trailing" secondItem="De9-ky-GyZ" secondAttribute="trailing" constant="3" id="zNS-UI-twS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="De9-ky-GyZ"/>
@@ -156,7 +156,7 @@
     </scenes>
     <resources>
         <image name="bar" width="3610" height="726"/>
-        <image name="directions" width="1422" height="2262"/>
+        <image name="directionsCard" width="2172" height="3454"/>
         <image name="star" width="100" height="100"/>
     </resources>
 </document>
