@@ -6,60 +6,11 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Nav View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="navViewController" customModule="SimpleNav" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bap-ou-1Vm">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                            </mapView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bar" translatesAutoresizingMaskIntoConstraints="NO" id="hLo-Ex-spz">
-                                <rect key="frame" x="-3" y="-39" width="381" height="880"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJ2-UP-qZC">
-                                <rect key="frame" x="343" y="387" width="28" height="28"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="MJ2-UP-qZC" secondAttribute="height" multiplier="1:1" id="0fO-RQ-zHK"/>
-                                    <constraint firstAttribute="height" constant="28" id="B6C-Ie-iMH"/>
-                                    <constraint firstAttribute="width" constant="28" id="Nao-bw-rw0"/>
-                                </constraints>
-                                <state key="normal" image="star"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hLo-Ex-spz" secondAttribute="bottom" constant="-63" id="1wT-qW-RH5"/>
-                            <constraint firstItem="hLo-Ex-spz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-83" id="5Zi-Uh-zHr"/>
-                            <constraint firstItem="MJ2-UP-qZC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="343" id="6wg-fn-AjL"/>
-                            <constraint firstItem="hLo-Ex-spz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-3" id="BCo-Qv-fb6"/>
-                            <constraint firstItem="bap-ou-1Vm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fso-Bc-exW"/>
-                            <constraint firstItem="bap-ou-1Vm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jTn-YK-svK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hLo-Ex-spz" secondAttribute="trailing" constant="-3" id="kUc-xS-VeF"/>
-                            <constraint firstItem="bap-ou-1Vm" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="mX8-uA-GfO"/>
-                            <constraint firstItem="MJ2-UP-qZC" firstAttribute="centerY" secondItem="hLo-Ex-spz" secondAttribute="centerY" id="wi9-at-pbx"/>
-                            <constraint firstItem="bap-ou-1Vm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="x1w-Ti-ogu"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="zAG-Zc-rkz"/>
-                    <connections>
-                        <outlet property="mapView" destination="bap-ou-1Vm" id="Sro-6U-hkJ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-905" y="702"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="FIx-r5-3fz">
             <objects>
@@ -92,7 +43,7 @@
                                     <constraint firstAttribute="height" constant="63" id="Bk3-Wu-RPg"/>
                                 </constraints>
                             </imageView>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Browse Destination" translatesAutoresizingMaskIntoConstraints="NO" id="LpR-ZN-u0F">
+                            <searchBar contentMode="redraw" placeholder="Browse Destination" translatesAutoresizingMaskIntoConstraints="NO" id="LpR-ZN-u0F">
                                 <rect key="frame" x="0.0" y="73" width="375" height="56"/>
                                 <color key="tintColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="yes"/>
@@ -152,10 +103,24 @@
             </objects>
             <point key="canvasLocation" x="-3346.4000000000001" y="405.66502463054189"/>
         </scene>
+        <!--Test View Controller-->
+        <scene sceneID="ar0-Gh-fio">
+            <objects>
+                <viewController id="Sk2-tm-uT6" customClass="TestViewController" customModule="SimpleNav" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eaV-Qx-MUL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="9zv-lg-XQE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o3O-vq-whe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2429" y="421"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bar" width="3610" height="726"/>
         <image name="directionsCard" width="2172" height="3454"/>
-        <image name="star" width="100" height="100"/>
     </resources>
 </document>

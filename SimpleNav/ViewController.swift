@@ -27,8 +27,15 @@ class ViewController: UIViewController {
     var pinAnnotationView:MKPinAnnotationView!
     
     //End Of Annotations
+
+    var searchBarWithoutDelegate: DAOSearchBar!
     
-    
+    let innerSpacing: CGFloat = 10.0
+    let margin: CGFloat = 15.0
+    let searchBarHeight: CGFloat = 34.0
+    let searchBarOriginalWidth: CGFloat = 44.0
+    var searchBarWidth: CGFloat = 0.0
+    var searchBarDestinationFrame = CGRect.zero
     
     @IBOutlet weak var nextdirectionsLabel: UILabel!
     @IBOutlet weak var directionsLabel: UILabel!
@@ -51,6 +58,7 @@ class ViewController: UIViewController {
         locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
         locationManager.startUpdatingLocation()
         mapView.delegate = self
+       
         
     }
     
@@ -132,6 +140,7 @@ extension ViewController: CLLocationManagerDelegate {
     }
 }
 
+
 extension ViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
@@ -184,7 +193,7 @@ extension ViewController: MKMapViewDelegate {
         if overlay is MKPolyline {
             let renderer = MKPolylineRenderer(overlay: overlay)
             renderer.strokeColor = .blue
-            renderer.lineWidth = 5
+            renderer.lineWidth = 2
             return renderer
         }
         if overlay is MKCircle {

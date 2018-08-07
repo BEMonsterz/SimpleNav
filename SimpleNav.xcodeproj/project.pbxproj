@@ -14,9 +14,14 @@
 		938A4EA32101054500B75988 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 938A4EA22101054500B75988 /* Assets.xcassets */; };
 		938A4EA62101054500B75988 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 938A4EA42101054500B75988 /* LaunchScreen.storyboard */; };
 		938A4EB0210105B900B75988 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 938A4EAE210105B100B75988 /* MapKit.framework */; };
+		93BAFEFD211373F100AC7CD2 /* DAOBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BAFEFB211373F100AC7CD2 /* DAOBundle.swift */; };
+		93BAFEFE211373F100AC7CD2 /* DAOSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BAFEFC211373F100AC7CD2 /* DAOSearchBar.swift */; };
+		93BAFF00211373FB00AC7CD2 /* DAOSearchBar.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 93BAFEFF211373FB00AC7CD2 /* DAOSearchBar.bundle */; };
+		EB6A3C8A4C0C0536DB409E54 /* Pods_SimpleNav.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB215EDC0420C72B47D1FD9 /* Pods_SimpleNav.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58FA919F1FBB5608D14ABA90 /* Pods-SimpleNav.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleNav.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleNav/Pods-SimpleNav.release.xcconfig"; sourceTree = "<group>"; };
 		9303E76821026169008759DF /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestViewController.swift; path = ../../TestViewController.swift; sourceTree = "<group>"; };
 		938A4E982101054500B75988 /* SimpleNav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleNav.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		938A4E9B2101054500B75988 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +31,12 @@
 		938A4EA52101054500B75988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		938A4EA72101054500B75988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		938A4EAE210105B100B75988 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		93BAFEFB211373F100AC7CD2 /* DAOBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOBundle.swift; sourceTree = "<group>"; };
+		93BAFEFC211373F100AC7CD2 /* DAOSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOSearchBar.swift; sourceTree = "<group>"; };
+		93BAFEFF211373FB00AC7CD2 /* DAOSearchBar.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DAOSearchBar.bundle; sourceTree = "<group>"; };
+		93C9B34E2112580700C74143 /* DAOSearchBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DAOSearchBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F74170246168C72A4452D557 /* Pods-SimpleNav.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleNav.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleNav/Pods-SimpleNav.debug.xcconfig"; sourceTree = "<group>"; };
+		FEB215EDC0420C72B47D1FD9 /* Pods_SimpleNav.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleNav.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,18 +45,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				938A4EB0210105B900B75988 /* MapKit.framework in Frameworks */,
+				EB6A3C8A4C0C0536DB409E54 /* Pods_SimpleNav.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7528BF38F6551F24BDFED773 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F74170246168C72A4452D557 /* Pods-SimpleNav.debug.xcconfig */,
+				58FA919F1FBB5608D14ABA90 /* Pods-SimpleNav.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		938A4E8F2101054500B75988 = {
 			isa = PBXGroup;
 			children = (
 				938A4E9A2101054500B75988 /* SimpleNav */,
 				938A4E992101054500B75988 /* Products */,
 				938A4EAD210105B100B75988 /* Frameworks */,
+				7528BF38F6551F24BDFED773 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +84,9 @@
 			children = (
 				938A4E9B2101054500B75988 /* AppDelegate.swift */,
 				938A4E9D2101054500B75988 /* ViewController.swift */,
+				93BAFEFF211373FB00AC7CD2 /* DAOSearchBar.bundle */,
+				93BAFEFC211373F100AC7CD2 /* DAOSearchBar.swift */,
+				93BAFEFB211373F100AC7CD2 /* DAOBundle.swift */,
 				9303E76821026169008759DF /* TestViewController.swift */,
 				938A4E9F2101054500B75988 /* Main.storyboard */,
 				938A4EA22101054500B75988 /* Assets.xcassets */,
@@ -74,7 +99,9 @@
 		938A4EAD210105B100B75988 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				93C9B34E2112580700C74143 /* DAOSearchBar.framework */,
 				938A4EAE210105B100B75988 /* MapKit.framework */,
+				FEB215EDC0420C72B47D1FD9 /* Pods_SimpleNav.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -86,9 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 938A4EAA2101054500B75988 /* Build configuration list for PBXNativeTarget "SimpleNav" */;
 			buildPhases = (
+				A134CF2FA1BA8C8AF6453320 /* [CP] Check Pods Manifest.lock */,
 				938A4E942101054500B75988 /* Sources */,
 				938A4E952101054500B75988 /* Frameworks */,
 				938A4E962101054500B75988 /* Resources */,
+				CB2E6823CE614819F6287BA3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -148,19 +177,61 @@
 			files = (
 				938A4EA62101054500B75988 /* LaunchScreen.storyboard in Resources */,
 				938A4EA32101054500B75988 /* Assets.xcassets in Resources */,
+				93BAFF00211373FB00AC7CD2 /* DAOSearchBar.bundle in Resources */,
 				938A4EA12101054500B75988 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A134CF2FA1BA8C8AF6453320 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimpleNav-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB2E6823CE614819F6287BA3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SimpleNav/Pods-SimpleNav-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DAOSearchBar/DAOSearchBar.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DAOSearchBar.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleNav/Pods-SimpleNav-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		938A4E942101054500B75988 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93BAFEFD211373F100AC7CD2 /* DAOBundle.swift in Sources */,
 				938A4E9E2101054500B75988 /* ViewController.swift in Sources */,
 				9303E76921026169008759DF /* TestViewController.swift in Sources */,
+				93BAFEFE211373F100AC7CD2 /* DAOSearchBar.swift in Sources */,
 				938A4E9C2101054500B75988 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +367,7 @@
 		};
 		938A4EAB2101054500B75988 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F74170246168C72A4452D557 /* Pods-SimpleNav.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -311,6 +383,7 @@
 		};
 		938A4EAC2101054500B75988 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58FA919F1FBB5608D14ABA90 /* Pods-SimpleNav.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
