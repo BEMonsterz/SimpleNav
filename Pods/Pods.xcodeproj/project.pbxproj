@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1BA32BF986D942E868AD1E524AB7F73B /* Pods-SimpleNav-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D72BD3F578F70108672C585460D78E4 /* Pods-SimpleNav-dummy.m */; };
+		1F8F2C2AE6F42AEA9609EBA35705A7CF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */; };
+		96D38A232CC4CCC17C6A8A7640C62DB0 /* Pods-SimpleNav-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C45561D03DA55A5D5F65DA62F53C7C8F /* Pods-SimpleNav-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD39D7E56148746D53D1E0837B868E3B /* DAOSearchBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1613282EE4910F1227A69C0764A360F7 /* DAOSearchBar-dummy.m */; };
+		C650C3D8AC9B7A529994A6E70C0286C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		C734776C8B7B137846129DD9CCA71639 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		D88C97BC94F950329D290CB6243527CA /* DAOSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0638CB55FD6BC238CB57D16DD093DF /* DAOSearchBar.swift */; };
+		DA890A167ECF4C21F591ED39340F3798 /* DAOSearchBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 42A8940F746F4AB58B7CC93853FCBC48 /* DAOSearchBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1F3EE95A4C31D3AE1351E26BC1EF2EC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49D713CD053BA364F13FD5F9B8E46A00;
+			remoteInfo = DAOSearchBar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0BACAF4A3005E3C9E58272AAE913D6EF /* Pods-SimpleNav.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleNav.release.xcconfig"; sourceTree = "<group>"; };
+		1613282EE4910F1227A69C0764A360F7 /* DAOSearchBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DAOSearchBar-dummy.m"; sourceTree = "<group>"; };
+		1EA61EDAE9F5C2E97FC8109B19866C29 /* DAOSearchBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DAOSearchBar-prefix.pch"; sourceTree = "<group>"; };
+		2050E0476E017432D917911599130B40 /* DAOSearchBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DAOSearchBar.modulemap; sourceTree = "<group>"; };
+		29A5EA9711A2B2CCC2744800EB4BBC99 /* DAOSearchBar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DAOSearchBar.xcconfig; sourceTree = "<group>"; };
+		3593F6F70A83EEEDF78187B54E4B1B90 /* Pods-SimpleNav-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SimpleNav-acknowledgements.markdown"; sourceTree = "<group>"; };
+		37B2326E9E49C6A9517A3340F7005DA6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42A8940F746F4AB58B7CC93853FCBC48 /* DAOSearchBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DAOSearchBar-umbrella.h"; sourceTree = "<group>"; };
+		5A0638CB55FD6BC238CB57D16DD093DF /* DAOSearchBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DAOSearchBar.swift; path = DAOSearchBar/DAOSearchBar.swift; sourceTree = "<group>"; };
+		6A0424906B8759E166C0EB0401DEA0B1 /* DAOSearchBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DAOSearchBar.framework; path = DAOSearchBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7848C545FA3E28AA50D74A62A27BB9EB /* Pods-SimpleNav-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SimpleNav-frameworks.sh"; sourceTree = "<group>"; };
+		7D72BD3F578F70108672C585460D78E4 /* Pods-SimpleNav-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SimpleNav-dummy.m"; sourceTree = "<group>"; };
+		908E902E026C5C22904CF9014A5604AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AC7BEDD6054840FAC35F514B3AE1D1F7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD7FF70BFA8DC51842126B1989D91F7B /* Pods-SimpleNav.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SimpleNav.modulemap"; sourceTree = "<group>"; };
+		B99E101A6DCE8A8B292C0C88EAA17FC0 /* Pods-SimpleNav-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SimpleNav-resources.sh"; sourceTree = "<group>"; };
+		BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		C45561D03DA55A5D5F65DA62F53C7C8F /* Pods-SimpleNav-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SimpleNav-umbrella.h"; sourceTree = "<group>"; };
+		DDC2DA5BAE1BDD40C9E3B5CAB2B485B4 /* Pods-SimpleNav.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleNav.debug.xcconfig"; sourceTree = "<group>"; };
+		E52A8C2871917D2D8E82D40ACEDE035F /* Pods_SimpleNav.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SimpleNav.framework; path = "Pods-SimpleNav.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB8A8355B19BF828BC08B3F157F1969C /* Pods-SimpleNav-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SimpleNav-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7E78FF0A36A2244739EE991667F5035F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C650C3D8AC9B7A529994A6E70C0286C5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6EDEFA3E3D765902ED704A7014034B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C734776C8B7B137846129DD9CCA71639 /* Foundation.framework in Frameworks */,
+				1F8F2C2AE6F42AEA9609EBA35705A7CF /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				908E902E026C5C22904CF9014A5604AD /* Foundation.framework */,
+				BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		263576454FBE47D506DD7A253A7D9C52 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2050E0476E017432D917911599130B40 /* DAOSearchBar.modulemap */,
+				29A5EA9711A2B2CCC2744800EB4BBC99 /* DAOSearchBar.xcconfig */,
+				1613282EE4910F1227A69C0764A360F7 /* DAOSearchBar-dummy.m */,
+				1EA61EDAE9F5C2E97FC8109B19866C29 /* DAOSearchBar-prefix.pch */,
+				42A8940F746F4AB58B7CC93853FCBC48 /* DAOSearchBar-umbrella.h */,
+				AC7BEDD6054840FAC35F514B3AE1D1F7 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DAOSearchBar";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				89AFEB63EEFE7772140822F4E441443B /* Pods */,
+				8AF2C01BA66095C46B43BEF78269A731 /* Products */,
+				9EB1A770699ADBCF2A4DDC5C3989D6CE /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		89AFEB63EEFE7772140822F4E441443B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DEE775E95310BFD72177D156E33EB456 /* DAOSearchBar */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8AF2C01BA66095C46B43BEF78269A731 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6A0424906B8759E166C0EB0401DEA0B1 /* DAOSearchBar.framework */,
+				E52A8C2871917D2D8E82D40ACEDE035F /* Pods_SimpleNav.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9EB1A770699ADBCF2A4DDC5C3989D6CE /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE763535578311947EB4D1EDE0B9A3ED /* Pods-SimpleNav */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CE763535578311947EB4D1EDE0B9A3ED /* Pods-SimpleNav */ = {
+			isa = PBXGroup;
+			children = (
+				37B2326E9E49C6A9517A3340F7005DA6 /* Info.plist */,
+				AD7FF70BFA8DC51842126B1989D91F7B /* Pods-SimpleNav.modulemap */,
+				3593F6F70A83EEEDF78187B54E4B1B90 /* Pods-SimpleNav-acknowledgements.markdown */,
+				EB8A8355B19BF828BC08B3F157F1969C /* Pods-SimpleNav-acknowledgements.plist */,
+				7D72BD3F578F70108672C585460D78E4 /* Pods-SimpleNav-dummy.m */,
+				7848C545FA3E28AA50D74A62A27BB9EB /* Pods-SimpleNav-frameworks.sh */,
+				B99E101A6DCE8A8B292C0C88EAA17FC0 /* Pods-SimpleNav-resources.sh */,
+				C45561D03DA55A5D5F65DA62F53C7C8F /* Pods-SimpleNav-umbrella.h */,
+				DDC2DA5BAE1BDD40C9E3B5CAB2B485B4 /* Pods-SimpleNav.debug.xcconfig */,
+				0BACAF4A3005E3C9E58272AAE913D6EF /* Pods-SimpleNav.release.xcconfig */,
+			);
+			name = "Pods-SimpleNav";
+			path = "Target Support Files/Pods-SimpleNav";
+			sourceTree = "<group>";
+		};
+		DEE775E95310BFD72177D156E33EB456 /* DAOSearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				5A0638CB55FD6BC238CB57D16DD093DF /* DAOSearchBar.swift */,
+				263576454FBE47D506DD7A253A7D9C52 /* Support Files */,
+			);
+			name = DAOSearchBar;
+			path = DAOSearchBar;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		69F1CDB6D997F3A6101927C55E627711 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA890A167ECF4C21F591ED39340F3798 /* DAOSearchBar-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E73246179EEE620730853DA6A6EC38FE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96D38A232CC4CCC17C6A8A7640C62DB0 /* Pods-SimpleNav-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		49D713CD053BA364F13FD5F9B8E46A00 /* DAOSearchBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3900740B8B7DFD99EC16281CDA2328A /* Build configuration list for PBXNativeTarget "DAOSearchBar" */;
+			buildPhases = (
+				8ACC99401A0405811C255753855B7BA4 /* Sources */,
+				E6EDEFA3E3D765902ED704A7014034B3 /* Frameworks */,
+				69F1CDB6D997F3A6101927C55E627711 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DAOSearchBar;
+			productName = DAOSearchBar;
+			productReference = 6A0424906B8759E166C0EB0401DEA0B1 /* DAOSearchBar.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EBBAA191A22AC095100A2CAEB99FDF73 /* Pods-SimpleNav */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C77AFC188AC705558412BB9BC08C60A8 /* Build configuration list for PBXNativeTarget "Pods-SimpleNav" */;
+			buildPhases = (
+				E62D14E30C452F6623A4FFC11690CEC0 /* Sources */,
+				7E78FF0A36A2244739EE991667F5035F /* Frameworks */,
+				E73246179EEE620730853DA6A6EC38FE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				98B5075F958FBEA169AC3AD7CE69DDBB /* PBXTargetDependency */,
+			);
+			name = "Pods-SimpleNav";
+			productName = "Pods-SimpleNav";
+			productReference = E52A8C2871917D2D8E82D40ACEDE035F /* Pods_SimpleNav.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 8AF2C01BA66095C46B43BEF78269A731 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49D713CD053BA364F13FD5F9B8E46A00 /* DAOSearchBar */,
+				EBBAA191A22AC095100A2CAEB99FDF73 /* Pods-SimpleNav */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8ACC99401A0405811C255753855B7BA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD39D7E56148746D53D1E0837B868E3B /* DAOSearchBar-dummy.m in Sources */,
+				D88C97BC94F950329D290CB6243527CA /* DAOSearchBar.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E62D14E30C452F6623A4FFC11690CEC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BA32BF986D942E868AD1E524AB7F73B /* Pods-SimpleNav-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		98B5075F958FBEA169AC3AD7CE69DDBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DAOSearchBar;
+			target = 49D713CD053BA364F13FD5F9B8E46A00 /* DAOSearchBar */;
+			targetProxy = 1F3EE95A4C31D3AE1351E26BC1EF2EC4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		10B3C9F113430BB7753CBB111DEC46A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29A5EA9711A2B2CCC2744800EB4BBC99 /* DAOSearchBar.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DAOSearchBar/DAOSearchBar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DAOSearchBar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DAOSearchBar/DAOSearchBar.modulemap";
+				PRODUCT_MODULE_NAME = DAOSearchBar;
+				PRODUCT_NAME = DAOSearchBar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		30D948AE62C04225F8DEF8734A4C5A26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		312486F7B10B39ECF063B389D4659A49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDC2DA5BAE1BDD40C9E3B5CAB2B485B4 /* Pods-SimpleNav.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SimpleNav/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SimpleNav/Pods-SimpleNav.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		58EA743C4FCB9CE236089768AEC408D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BACAF4A3005E3C9E58272AAE913D6EF /* Pods-SimpleNav.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SimpleNav/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SimpleNav/Pods-SimpleNav.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9E88537B08ED4D6EB44DBA7BC8D56A35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		C885C18306A1C332C4F4B01B58FA24B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29A5EA9711A2B2CCC2744800EB4BBC99 /* DAOSearchBar.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DAOSearchBar/DAOSearchBar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DAOSearchBar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DAOSearchBar/DAOSearchBar.modulemap";
+				PRODUCT_MODULE_NAME = DAOSearchBar;
+				PRODUCT_NAME = DAOSearchBar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E88537B08ED4D6EB44DBA7BC8D56A35 /* Debug */,
+				30D948AE62C04225F8DEF8734A4C5A26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3900740B8B7DFD99EC16281CDA2328A /* Build configuration list for PBXNativeTarget "DAOSearchBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10B3C9F113430BB7753CBB111DEC46A6 /* Debug */,
+				C885C18306A1C332C4F4B01B58FA24B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C77AFC188AC705558412BB9BC08C60A8 /* Build configuration list for PBXNativeTarget "Pods-SimpleNav" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				312486F7B10B39ECF063B389D4659A49 /* Debug */,
+				58EA743C4FCB9CE236089768AEC408D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

@@ -1,0 +1,16 @@
+PODS:
+  - DAOSearchBar (1.0.4)
+
+DEPENDENCIES:
+  - DAOSearchBar
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - DAOSearchBar
+
+SPEC CHECKSUMS:
+  DAOSearchBar: b1f2024c2e7ca776ae67f70170f0c5b8f9c427a1
+
+PODFILE CHECKSUM: 55fc746c04223363144527ac1d36c47a05c0a588
+
+COCOAPODS: 1.5.2

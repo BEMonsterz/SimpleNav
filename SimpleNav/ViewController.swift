@@ -14,7 +14,8 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
-    
+    var bgImage: UIImageView?
+
     //Annotations
     
     var searchController:UISearchController!
@@ -58,7 +59,12 @@ class ViewController: UIViewController {
         locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
         locationManager.startUpdatingLocation()
         mapView.delegate = self
-       
+        let image: UIImage = UIImage(named: "arrow_up")!
+        bgImage = UIImageView(image: image)
+        bgImage!.frame = CGRect(x: 200, y: 200, width: 150, height: 150)
+        bgImage?.contentMode = .scaleAspectFit
+
+        self.view.addSubview(bgImage!)
         
     }
     
