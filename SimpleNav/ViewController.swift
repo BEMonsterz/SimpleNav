@@ -80,7 +80,10 @@ class ViewController: UIViewController {
         let directions = MKDirections(request: directionsRequest)
         directions.calculate { (response, _) in
             guard let response = response else { return }
-            guard let primaryRoute = response.routes.first else { return }
+            guard let primaryRoute = response.routes.first else {
+                return
+                
+            }
             
             self.mapView.add(primaryRoute.polyline)
             
